@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Resume Long Videos",
+  "version": "1.0.0",
+  "description": "Remembers playback positions for longer YouTube videos and stores them locally in your browser.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["*://www.youtube.com/*"],
+  "action": {
+    "default_title": "Resume Long Videos",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png",
+      "128": "icons/icon-128.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{c3a8f550-0ec0-4eb2-95a6-3ec77f0348af}",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
+}

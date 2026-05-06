@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume Long Videos</title>
+  <link rel="stylesheet" href="popup.compact.css">
+</head>
+<body>
+  <main>
+    <h1>Resume Long Videos</h1>
+    <p id="currentStatus">Checking current tab...</p>
+    <section id="currentVideo" hidden>
+      <p id="currentTitle"></p>
+      <p id="currentMeta"></p>
+      <button id="clearCurrent" type="button" class="danger">Clear this video</button>
+      <button id="excludeCurrent" type="button">Do not save this video</button>
+      <button id="includeCurrent" type="button">Allow saving this video</button>
+    </section>
+    <p id="savedCount">Loading saved data...</p>
+    <button id="openOptions" type="button">Open settings</button>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
